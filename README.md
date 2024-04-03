@@ -62,7 +62,7 @@ github actions are used to automate the following processes whenever a change is
    
      
    **Note** -if all the processes run successfully the following output will be visible in github actions:
-   ![Success Build](resources/Build.png)
+   ![Success Build](resources/build.png)
 
 To manually Build the Optimized Rust Binary, execute the following command:
 ```console
