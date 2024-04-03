@@ -6,3 +6,10 @@ format:
 
 lint:
 	find . -type f -name "*.toml" -exec cargo clippy  --quiet --manifest-path {} \;
+build:
+	cargo build --release --manifest-path ./main/Cargo.toml
+
+copy:
+	cp rust_cli/target/release/rust_cli ./"Rust_Binary"
+		
+all: build test format lint
