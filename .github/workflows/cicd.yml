@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name : Build
         run : make build
       - name : Copy
@@ -39,7 +39,7 @@ jobs:
           git commit -m "Added Results" || echo "ignore commit failure, proceed"
           git push
       - name: Publish Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: my-artifact
           path: Rust_Binary
@@ -50,7 +50,7 @@ jobs:
 
     steps:
     - name: Download Artifact
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         name: my-artifact
         path: downloaded-artifact
